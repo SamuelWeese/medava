@@ -1,1 +1,39 @@
-Your questions here.
+//
+
+First, I want to say I am writing this after working on the assignment. I would like to assert that I followed the style provided by the original authors, but that I would prefer wide code. Wide code is good as it has verbose names, and is easier to read for those who are eyesight impaired, as this_is_easier_to_read thanThisIsToRead.
+
+This is a nit pick, but I just wanted to put it out there. More importantly, however, is to follow the style given by the original code. 
+
+Questions:
+
+You asked a couple questions. I answered them.
+
+What do you think might be the reason why those two groups of tools (in reference to JDK vs JRE) would be distributed separately? 
+- This slims down the need for size of distribution. Its the same reason we don't ship gcc files with code (or at least why we shouldn't), and instead only ship a final, compiled product. It reduces distribution size, and at scale EVERTHING costs money.
+
+Does everyone need the ability to write software in Java?
+- **** (explitive) no. I'm insulted by this. C predated Java, and we could have stopped there. 
+- In all reality, I think its a very useful skill since 2017, when the NSA released ghidra. It runs on Java. Java is useful, but people often forget that it came from oak, and it was a marketing gimick. I'm not totally sold on it, but the build once ship everywhere idea is nice.
+
+Are there more people who will want to run code written in Java than to write code in Java?
+- Yes. Minecraft exists, that alone eclipses everyone who writes Java. Secondly, I would argue this is true of nearly every language, except for Koffect and Perl. Everyone wants to write Perl, they just don't know it yet (kidding).
+
+Why does Java (and other OOP languages) give us this type of power (in reference to subtypes)?
+- Because Rust doesn't like ABC's, and Java does.  Subtypes allow all types of cool stuff like implementing interfaces which we can guarentee of child classes, and make sets of features for an object which are guarenteed for all of their children, even if we don't know what the children will do yet.
+
+
+My questions:
+
+To what degree does C++ map onto Java? Both seem to be super OOP oriented.
+
+What are some of the downsides of OOP? Why do we model the real world with OOP? Should't we model a model of the real world?
+
+Why are all Java classes "virtual" by default?
+
+How does Java solve the diamond problem? I don't think we can have multiple things to inheirit from... is it all in a single line?
+
+The JRE is notoriously vulnerable (at least according to MITRE). How is this the case? Wouldn't having a virtual environment result in the system compartimentalizing and virtualizing access?
+
+Why is there such an insistance on setters and getters? Wouldn't simply making a variable public, and then naming it specifically also work? I assume there is an intention of communication of intent, but if a setter of getter is public doesn't this make the system just one step harder to do anyhting with?
+
+Does Java compile to bytecode? Does it compile to ASM? If it does, wouldn't this be a ton of jmps to get setters and getters? I assume something like gcc would optimize these out on compilation?
